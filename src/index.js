@@ -19,3 +19,24 @@ module.exports = function towelSort (matrix) {
   return resultArr;  
 }
 
+// another solution
+
+// function towelSort(matrix) {
+//   let resultArr = [];
+//   if (matrix !== undefined) {
+//     let element;
+//     for (let i = 0; i < matrix.length; i++) {        -> work with matrix
+//       for (let j = 0; j < matrix[i].length; j++) {   -> work with subarray
+//         if (i % 2 === 0) {                           -> even subarray index
+//           element = matrix[i][j];                    -> order of numbers doesn't change
+//         }
+//         else {
+//           element = matrix[i][matrix[i].length - j - 1];  -> start in the end of row (of subarray)
+//         }
+//         resultArr.push(element);                      -> push every number 
+//       }
+//     }
+//   }
+//   return resultArr;
+// }
+
